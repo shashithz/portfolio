@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name — Software Developer" />
+
+  <!-- Google Fonts: Space Grotesk (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+      <!-- EDIT YOUR NAME HERE -->
+      <a href="#home" class="nav-logo">Your<span>Name</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-container">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <!-- EDIT YOUR NAME HERE -->
+        <h1 class="hero-name">Your Full Name</h1>
+        <h2 class="hero-title">
+          <span id="typedTitle"></span><span class="cursor" aria-hidden="true">|</span>
+        </h2>
+        <!-- EDIT YOUR SHORT INTRO HERE -->
+        <p class="hero-intro">
+          I build clean, functional, and thoughtful digital experiences —
+          from front-end interfaces to back-end logic. Currently focused on
+          growing as a well-rounded software developer.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="hero-image-frame">
+          <!-- Replace assets/profile.jpg with your own photo -->
+          <img src="assets/profile.jpg" alt="Portrait of Your Name" class="hero-image" />
+        </div>
+        <div class="hero-terminal" aria-hidden="true">
+          <div class="terminal-dots"><span></span><span></span><span></span></div>
+          <p class="terminal-line"><span class="terminal-prompt">&gt;</span> status: <span class="terminal-accent">available for work</span></p>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="section" id="about">
+    <div class="section-container about-grid">
+      <div class="about-image-col fade-up">
+        <div class="about-image-frame">
+          <img src="assets/profile.jpg" alt="Your Name" />
+        </div>
+      </div>
+
+      <div class="about-content fade-up">
+        <h3 class="section-heading">About Me</h3>
+        <!-- EDIT YOUR ABOUT TEXT HERE -->
+        <p class="about-text">
+          I'm a Computer Science undergraduate with a strong interest in
+          software development, problem-solving, and building products that
+          are simple to use. I enjoy working across the stack — designing
+          interfaces, writing back-end logic, and understanding how data
+          flows through a system. Replace this paragraph with a short
+          summary of your own background, interests, and what drives you.
+        </p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="info-label">Email</span>
+              <!-- EDIT YOUR EMAIL HERE -->
+              <span class="info-value">your.email@example.com</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="info-label">Location</span>
+              <!-- EDIT YOUR LOCATION HERE -->
+              <span class="info-value">Your City, Your Country</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+              <span class="info-label">Status</span>
+              <!-- EDIT YOUR STATUS HERE -->
+              <span class="info-value">University Undergraduate</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-bullseye"></i>
+            <div>
+              <span class="info-label">Goal</span>
+              <!-- EDIT YOUR CAREER GOAL HERE -->
+              <span class="info-value">Software Engineer role</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Link this to your actual CV file inside the assets folder -->
+        <a href="assets/CV.pdf" class="btn btn-primary" download>
+          <i class="fa-solid fa-download"></i> Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS SECTION ============ -->
+  <section class="section section-alt" id="skills">
+    <div class="section-container">
+      <h3 class="section-heading center">Skills</h3>
+      <p class="section-subtext center">
+        Technologies and tools I currently work with. Percentages reflect my own comfort level — edit them anytime in index.html.
+      </p>
+
+      <!-- EDIT YOUR SKILLS HERE: change the data-level percentage and label for each skill -->
+      <div class="skills-grid fade-up">
+
+        <div class="skill-card">
+          <i class="fa-brands fa-html5 skill-icon"></i>
+          <div class="skill-head">
+            <span>HTML</span><span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt skill-icon"></i>
+          <div class="skill-head">
+            <span>CSS</span><span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-js skill-icon"></i>
+          <div class="skill-head">
+            <span>JavaScript</span><span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-python skill-icon"></i>
+          <div class="skill-head">
+            <span>Python</span><span class="skill-percent">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-level="75"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-java skill-icon"></i>
+          <div class="skill-head">
+            <span>Java</span><span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-database skill-icon"></i>
+          <div class="skill-head">
+            <span>SQL</span><span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-git-alt skill-icon"></i>
+          <div class="skill-head">
+            <span>Git / GitHub</span><span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION SECTION ============ -->
+  <section class="section" id="education">
+    <div class="section-container">
+      <h3 class="section-heading center">Education</h3>
+      <p class="section-subtext center">A timeline of my academic background — replace with your own history.</p>
+
+      <!-- EDIT YOUR EDUCATION HERE -->
+      <div class="timeline fade-up">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024 - Present</span>
+            <h4>Degree / Diploma Name</h4>
+            <p class="timeline-org">University / Institute Name</p>
+            <p class="timeline-desc">Short description of coursework, focus areas, or achievements during this period. Replace with your real details.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022 - 2024</span>
+            <h4>Qualification Name</h4>
+            <p class="timeline-org">School / College Name</p>
+            <p class="timeline-desc">Short description of subjects studied or results achieved. Replace with your real details.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2020 - 2022</span>
+            <h4>Qualification Name</h4>
+            <p class="timeline-org">School Name</p>
+            <p class="timeline-desc">Short description of subjects studied or results achieved. Replace with your real details.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS SECTION ============ -->
+  <section class="section section-alt" id="projects">
+    <div class="section-container">
+      <h3 class="section-heading center">Projects</h3>
+      <p class="section-subtext center">
+        A selection of example projects — replace these cards with your own real work.
+      </p>
+
+      <!-- EDIT YOUR PROJECTS HERE: duplicate a .project-card block to add more -->
+      <div class="projects-grid">
+
+        <article class="project-card fade-up">
+          <div class="project-image">
+            <img src="https://placehold.co/600x400/14171C/9AA2AD?text=Project+Screenshot" alt="Placeholder screenshot of Task Manager App" />
+          </div>
+          <div class="project-body">
+            <h4>Task Manager App</h4>
+            <p>A responsive web app for creating, organizing, and tracking daily tasks with local storage persistence.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-small btn-small-filled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <div class="project-image">
+            <img src="https://placehold.co/600x400/14171C/9AA2AD?text=Project+Screenshot" alt="Placeholder screenshot of Library Management System" />
+          </div>
+          <div class="project-body">
+            <h4>Library Management System</h4>
+            <p>A desktop application to manage book records, borrower details, and due dates using a relational database.</p>
+            <div class="project-tags">
+              <span>Java</span><span>SQL</span><span>Swing</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-small btn-small-filled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <div class="project-image">
+            <img src="https://placehold.co/600x400/14171C/9AA2AD?text=Project+Screenshot" alt="Placeholder screenshot of Weather Dashboard" />
+          </div>
+          <div class="project-body">
+            <h4>Weather Dashboard</h4>
+            <p>A dashboard that fetches live weather data from a public API and displays forecasts with clean data visualizations.</p>
+            <div class="project-tags">
+              <span>JavaScript</span><span>REST API</span><span>Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-small btn-small-filled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card fade-up">
+          <div class="project-image">
+            <img src="https://placehold.co/600x400/14171C/9AA2AD?text=Project+Screenshot" alt="Placeholder screenshot of Student Result Analyzer" />
+          </div>
+          <div class="project-body">
+            <h4>Student Result Analyzer</h4>
+            <p>A Python tool that processes exam result spreadsheets and generates automated performance summaries and charts.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn-small btn-small-filled"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES SECTION ============ -->
+  <section class="section" id="services">
+    <div class="section-container">
+      <h3 class="section-heading center">Services</h3>
+      <p class="section-subtext center">Areas I can help with — edit these to match what you actually offer.</p>
+
+      <div class="services-grid fade-up">
+        <div class="service-card">
+          <i class="fa-solid fa-code service-icon"></i>
+          <h4>Web Development</h4>
+          <p>Building responsive, fast, and accessible websites using modern HTML, CSS, and JavaScript practices.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-pen-ruler service-icon"></i>
+          <h4>UI / UX Design</h4>
+          <p>Designing clean, intuitive interfaces with a focus on usability, consistency, and visual hierarchy.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-laptop-code service-icon"></i>
+          <h4>Software Development</h4>
+          <p>Writing well-structured applications in Python and Java, from small scripts to full desktop programs.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-database service-icon"></i>
+          <h4>Database Management</h4>
+          <p>Designing relational database schemas and writing efficient SQL queries for real-world applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE SECTION ============ -->
+  <section class="section section-alt" id="experience">
+    <div class="section-container">
+      <h3 class="section-heading center">Experience</h3>
+      <p class="section-subtext center">Internships and work experience — replace with your own timeline.</p>
+
+      <!-- EDIT YOUR EXPERIENCE HERE -->
+      <div class="timeline fade-up">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2025 (3 months)</span>
+            <h4>Software Engineering Intern</h4>
+            <p class="timeline-org">Company / Organization Name</p>
+            <p class="timeline-desc">Assisted in building and testing features for an internal web application, working within a small agile team. Replace with your real responsibilities.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024 (Volunteer)</span>
+            <h4>Junior Developer</h4>
+            <p class="timeline-org">Organization / Club Name</p>
+            <p class="timeline-desc">Contributed to a small team project, helping design and implement a basic web tool. Replace with your real details.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section class="section" id="contact">
+    <div class="section-container">
+      <h3 class="section-heading center">Get In Touch</h3>
+      <p class="section-subtext center">Have a project in mind or just want to say hello? Send a message below.</p>
+
+      <div class="contact-grid">
+
+        <div class="contact-info fade-up">
+          <!-- EDIT YOUR CONTACT DETAILS HERE -->
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="info-label">Email</span>
+              <span class="info-value">your.email@example.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span class="info-label">Phone</span>
+              <span class="info-value">+00 000 000 0000</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="info-label">Location</span>
+              <span class="info-value">Your City, Your Country</span>
+            </div>
+          </div>
+
+          <!-- EDIT YOUR SOCIAL LINKS HERE -->
+          <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form fade-up" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+              <span class="form-error" id="emailError"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What is this about?" />
+            <span class="form-error" id="subjectError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+          <p class="form-success" id="formSuccess">
+            <i class="fa-solid fa-circle-check"></i> Your message has been noted — I'll get back to you soon.
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <!-- EDIT YOUR NAME HERE -->
+        <a href="#home" class="nav-logo">Your<span>Name</span></a>
+        <p>Building thoughtful software, one project at a time.</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://instagram.com/yourusername" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+      <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
